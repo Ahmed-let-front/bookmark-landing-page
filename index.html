@@ -11,7 +11,14 @@
     <title>Bookmark | Simple & Easy Bookmark Manager</title>
   </head>
   <body class="text-blue-950">
-    <header class="w-full sticky top-0 z-20 bg-white shadow-xl">
+    <div
+      id="scroll-trigger"
+      class="absolute top-0 h-20 w-full pointer-events-none"
+    ></div>
+    <header
+      class="w-full sticky top-0 z-20 bg-white before-down-hero animate-down-hero"
+      id="headOfWeb"
+    >
       <div
         class="container flex justify-between items-center py-10 mb-25 max-md:py-6 max-md:mb-12"
       >
@@ -27,13 +34,25 @@
           class="uppercase flex gap-8 items-center text-[0.7rem] max-md:hidden"
         >
           <ul class="flex items-center gap-8">
-            <li class="item-nav"><a href="#features">features</a></li>
-            <li class="item-nav"><a href="#pricing">pricing</a></li>
-            <li class="item-nav"><a href="#contact">contact</a></li>
+            <li
+              class="item-nav before-down-hero animate-down-hero animate-delay-[100ms]"
+            >
+              <a href="#features">features</a>
+            </li>
+            <li
+              class="item-nav before-down-hero animate-down-hero animate-delay-[125ms]"
+            >
+              <a href="#pricing">pricing</a>
+            </li>
+            <li
+              class="item-nav before-down-hero animate-down-hero animate-delay-[1050ms]"
+            >
+              <a href="#contact">contact</a>
+            </li>
           </ul>
           <button
             type="button"
-            class="item-nav uppercase border-2 font-bold border-red-400 text-white bg-red-400 hover:bg-transparent hover:text-red-400 py-2 px-6 rounded-sm"
+            class="item-nav before-down-hero animate-down-hero uppercase border-2 font-bold border-red-400 text-white bg-red-400 hover:bg-transparent hover:text-red-400 py-2 px-6 rounded-sm"
           >
             login
           </button>
@@ -100,7 +119,7 @@
         <div
           class="container flex justify-between items-center max-md:flex-col-reverse max-md:gap-12 max-md:text-center"
         >
-          <div class="md:w-1/2">
+          <div class="md:w-1/2 before-left-hero animate-left-hero">
             <h1 class="text-4xl font-medium text-blue-950 max-md:text-3xl">
               A Simple Bookmark Manager
             </h1>
@@ -112,13 +131,13 @@
             <div class="flex gap-4 max-md:flex-wrap max-md:justify-center">
               <a
                 href="#"
-                class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all duration-300"
+                class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all duration-300 before-observer-up"
               >
                 Get it on Chrome
               </a>
               <a
                 href="#"
-                class="bg-grey-50 text-blue-950 px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:border-blue-950 border-2 border-transparent transition-all duration-300"
+                class="bg-grey-50 text-blue-950 px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:border-blue-950 border-2 border-transparent transition-all duration-300 before-observer-up"
               >
                 Get it on Firefox
               </a>
@@ -130,7 +149,7 @@
             <img
               src="/src/assets/images/illustration-hero.svg"
               alt="Bookmark app dashboard preview"
-              class="max-md:mx-auto"
+              class="max-md:mx-auto before-right-hero animate-right-hero"
             />
           </div>
         </div>
@@ -141,7 +160,7 @@
         class="page-section"
         aria-labelledby="features-title"
       >
-        <div class="container text-center">
+        <div class="container text-center before-observer-up">
           <h2 id="features-title" class="section-title">Features</h2>
           <p class="section-text">
             Our aim is to make it quick and easy for you to access your
@@ -196,7 +215,7 @@
             id="panel-1"
             role="tabpanel"
             aria-labelledby="tab-1"
-            class="tab-panel"
+            class="tab-panel before-observer-up"
           >
             <div class="tab-media">
               <img
@@ -270,17 +289,17 @@
         aria-labelledby="download-title"
       >
         <div class="container text-center">
-          <h2 id="download-title" class="section-title">
+          <h2 id="download-title" class="section-title before-observer-up">
             Download the extension
           </h2>
-          <p class="section-text">
+          <p class="section-text before-observer-up">
             We’ve got more browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
           </p>
           <ul
             class="mx-auto mt-14 grid max-w-xs gap-8 md:max-w-3xl md:grid-cols-3 md:items-start md:gap-6"
           >
-            <li class="download-card">
+            <li class="download-card before-observer-up">
               <img
                 src="/src/assets/images/logo-chrome.svg"
                 alt=""
@@ -293,7 +312,7 @@
                 Add &amp; Install Extension
               </a>
             </li>
-            <li class="download-card md:mt-7">
+            <li class="download-card md:mt-7 before-observer-up">
               <img
                 src="/src/assets/images/logo-firefox.svg"
                 alt=""
@@ -306,7 +325,7 @@
                 Add &amp; Install Extension
               </a>
             </li>
-            <li class="download-card md:mt-14">
+            <li class="download-card md:mt-14 before-observer-up">
               <img
                 src="/src/assets/images/logo-opera.svg"
                 alt=""
@@ -324,7 +343,7 @@
       </section>
 
       <section class="page-section" aria-labelledby="faq-title">
-        <div class="container text-center">
+        <div class="container text-center before-observer-up">
           <h2 id="faq-title" class="section-title">
             Frequently Asked Questions
           </h2>
@@ -333,7 +352,7 @@
             like answered please feel free to email us.
           </p>
           <ul class="mx-auto mt-12 max-w-sm text-left">
-            <li class="faq-item">
+            <li class="faq-item before-observer-up">
               <details class="group faq" name="faq">
                 <summary class="faq-question">
                   What is Bookmark?
@@ -349,7 +368,7 @@
                 </p>
               </details>
             </li>
-            <li class="faq-item">
+            <li class="faq-item before-observer-up">
               <details class="group faq" name="faq">
                 <summary class="faq-question">
                   How can I request a new browser?
@@ -367,7 +386,7 @@
                 </p>
               </details>
             </li>
-            <li class="faq-item">
+            <li class="faq-item before-observer-up">
               <details class="group faq" name="faq">
                 <summary class="faq-question">
                   Is there a mobile app?
@@ -383,7 +402,7 @@
                 </p>
               </details>
             </li>
-            <li class="faq-item">
+            <li class="faq-item before-observer-up">
               <details class="group faq" name="faq">
                 <summary class="faq-question">
                   What about other Chromium browsers?
@@ -400,7 +419,7 @@
               </details>
             </li>
           </ul>
-          <a href="#" class="btn-primary mt-12">More Info</a>
+          <a href="#" class="btn-primary mt-12 before-observer-up">More Info</a>
         </div>
       </section>
 
@@ -409,18 +428,18 @@
         class="page-section bg-blue-600 px-6 py-16 text-center text-white md:py-20"
         aria-labelledby="contact-title"
       >
-        <p class="text-xs tracking-[0.3rem] uppercase">
+        <p class="text-xs tracking-[0.3rem] uppercase before-observer-up">
           35,000+ already joined
         </p>
         <h2
           id="contact-title"
-          class="mx-auto mt-4 max-w-xs text-2xl font-medium md:text-3xl"
+          class="mx-auto mt-4 max-w-xs text-2xl font-medium md:text-3xl before-observer-up"
         >
           Stay up-to-date with what we’re doing
         </h2>
         <form
           novalidate
-          class="mx-auto mt-8 flex max-w-sm flex-col items-start gap-3 sm:flex-row"
+          class="mx-auto mt-8 flex max-w-sm flex-col items-start gap-3 sm:flex-row before-observer-up"
         >
           <div class="relative w-full flex-1 text-left">
             <label for="email" class="sr-only">Email address</label>
@@ -476,8 +495,12 @@
               </a>
             </li>
             <li class="item-nav"><a href="#features">features</a></li>
-            <li class="item-nav"><a href="#pricing">pricing</a></li>
-            <li class="item-nav"><a href="#contact">contact</a></li>
+            <li class="item-nav">
+              <a href="#pricing">pricing</a>
+            </li>
+            <li class="item-nav">
+              <a href="#contact">contact</a>
+            </li>
           </ul>
         </nav>
         <ul class="flex gap-8 items-center md:ml-auto">
