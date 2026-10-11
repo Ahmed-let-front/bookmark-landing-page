@@ -2,8 +2,119 @@
 @import '@fontsource-variable/rubik';
 @custom-variant hover (&:hover);
 @theme {
+  --font-sans: 'Rubik Variable', sans-serif;
+
+  --color-blue-600: hsl(231 69% 60%);
+  --color-red-400: hsl(0 94% 66%);
+
+  --color-grey-50: hsl(0 0% 97%);
+  --color-blue-950: hsl(229 31% 21%);
 }
 @layer base {
+  html {
+    @apply scroll-smooth selection:bg-blue-600 selection:text-white [scrollbar-color:var(--color-blue-600)_var(--color-grey-50)] [scrollbar-width:thin];
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-red-400;
+  }
 }
 @layer components {
+  .item-nav {
+    @apply tracking-[0.1rem] duration-300 transition-colors hover:text-red-400 cursor-pointer;
+  }
+  .custom-shape::before {
+    content: '';
+    @apply absolute -z-10 rounded-l-full bg-blue-600 w-[45%] h-3/4 bottom-0 right-0;
+  }
+
+  .page-section {
+    @apply mt-24 scroll-mt-8 md:mt-36;
+  }
+  .section-title {
+    @apply text-2xl font-medium md:text-3xl;
+  }
+  .section-text {
+    @apply mx-auto mt-4 max-w-md text-gray-500;
+  }
+  .btn-primary {
+    @apply inline-block cursor-pointer rounded-md border-2 border-blue-600 bg-blue-600 px-6 py-3 text-center text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-transparent hover:text-blue-600;
+  }
+
+  .mobile-link {
+    @apply block border-t border-white/20 py-4 text-center text-lg tracking-[0.2rem] uppercase transition-colors duration-300 hover:text-red-400;
+  }
+  .social-link {
+    @apply block p-1 transition-opacity duration-300 hover:opacity-70;
+  }
+
+  .tab-btn {
+    @apply relative w-full cursor-pointer border-b border-gray-200 py-4 text-sm transition-colors duration-300 hover:text-red-400 md:border-b-0 md:py-5 after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-1/2 after:-translate-x-1/2 after:scale-x-0 after:bg-red-400 after:transition-transform after:duration-300 after:content-[''] aria-selected:after:scale-x-100 md:after:w-full;
+  }
+  .tab-panel {
+    @apply flex flex-col items-center gap-12 text-center lg:flex-row lg:gap-20 lg:text-left;
+  }
+  .tab-media {
+    @apply relative isolate w-full max-w-md lg:w-1/2 lg:max-w-none before:absolute before:top-1/4 before:-bottom-1/4 before:right-[16%] before:-z-10 before:w-screen before:rounded-br-[6rem] before:bg-blue-600 before:content-[''];
+  }
+  .tab-title {
+    @apply text-2xl font-medium md:text-3xl;
+  }
+  .tab-text {
+    @apply mx-auto my-4 max-w-md text-gray-500 lg:mx-0;
+  }
+
+  .download-card {
+    @apply rounded-xl bg-white px-6 pt-10 pb-8 text-center shadow-xl shadow-gray-200;
+  }
+  .download-logo {
+    @apply mx-auto h-24 w-auto;
+  }
+  .download-name {
+    @apply mt-6 text-lg font-medium;
+  }
+  .download-version {
+    @apply mt-1 text-sm text-gray-400;
+  }
+  .download-divider {
+    @apply my-6 border-t-2 border-dotted border-gray-300;
+  }
+
+  .faq-item {
+    @apply border-b border-gray-200 py-4;
+  }
+  .faq-question {
+    @apply flex cursor-pointer items-center justify-between font-medium text-gray-800 list-none [&::-webkit-details-marker]:hidden;
+  }
+  .faq-icon {
+    @apply shrink-0 duration-500 group-open:rotate-180 group-open:hue-rotate-[129deg];
+  }
+  .faq-wapper {
+    @apply grid grid-rows-[0fr] starting:group-open:grid-rows-[0fr] duration-500 transition-discrete overflow-hidden group-open:grid-rows-[1fr];
+  }
+  .faq-answer {
+    @apply text-sm text-gray-500 leading-relaxed min-h-0 pt-3;
+  }
+}
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  @media (width >= 40rem) {
+    max-width: 32rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 40rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 54rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 68rem;
+  }
+  @media (width >= 96rem) {
+    max-width: 82rem;
+  }
 }
