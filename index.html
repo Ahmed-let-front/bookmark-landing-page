@@ -151,14 +151,14 @@
           <ul
             role="tablist"
             aria-label="Features"
-            class="mx-auto mt-10 flex max-w-lg flex-col border-t border-gray-200 md:flex-row md:border-t-0 md:border-b"
+            class="mx-auto mt-10 flex max-w-lg flex-col border-t border-gray-200 md:flex-row md:border-t-0 md:border-b justify-between"
           >
             <li role="presentation">
               <button
                 id="tab-1"
+                class="tab-btn"
                 type="button"
                 role="tab"
-                class="tab-btn"
                 aria-selected="true"
                 aria-controls="panel-1"
               >
@@ -169,11 +169,10 @@
               <button
                 id="tab-2"
                 type="button"
-                role="tab"
                 class="tab-btn"
+                role="tab"
                 aria-selected="false"
                 aria-controls="panel-2"
-                tabindex="-1"
               >
                 Speedy Searching
               </button>
@@ -181,12 +180,11 @@
             <li role="presentation">
               <button
                 id="tab-3"
+                class="tab-btn"
                 type="button"
                 role="tab"
-                class="tab-btn"
                 aria-selected="false"
                 aria-controls="panel-3"
-                tabindex="-1"
               >
                 Easy Sharing
               </button>
@@ -334,9 +332,9 @@
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
           </p>
-          <ul class="mx-auto mt-12 max-w-sm text-left duration-500">
+          <ul class="mx-auto mt-12 max-w-sm text-left">
             <li class="faq-item">
-              <details class="group py-4" name="faq">
+              <details class="group faq" name="faq">
                 <summary class="faq-question">
                   What is Bookmark?
                   <img
@@ -345,16 +343,14 @@
                     class="faq-icon"
                   />
                 </summary>
-                <div class="faq-wapper">
-                  <p class="faq-answer">
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdiet.
-                  </p>
-                </div>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet.
+                </p>
               </details>
             </li>
             <li class="faq-item">
-              <details class="group" name="faq">
+              <details class="group faq" name="faq">
                 <summary class="faq-question">
                   How can I request a new browser?
                   <img
@@ -363,18 +359,16 @@
                     class="faq-icon"
                   />
                 </summary>
-                <div class="faq-wapper">
-                  <p class="faq-answer">
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdiet.
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdiet.
-                  </p>
-                </div>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                  luctus eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdiet.
+                </p>
               </details>
             </li>
             <li class="faq-item">
-              <details class="group" name="faq">
+              <details class="group faq" name="faq">
                 <summary class="faq-question">
                   Is there a mobile app?
                   <img
@@ -383,16 +377,14 @@
                     class="faq-icon"
                   />
                 </summary>
-                <div class="faq-wapper">
-                  <p class="faq-answer">
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdiet.
-                  </p>
-                </div>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet.
+                </p>
               </details>
             </li>
             <li class="faq-item">
-              <details class="group" name="faq">
+              <details class="group faq" name="faq">
                 <summary class="faq-question">
                   What about other Chromium browsers?
                   <img
@@ -401,12 +393,10 @@
                     class="faq-icon"
                   />
                 </summary>
-                <div class="faq-wapper">
-                  <p class="faq-answer">
-                    Vivamus luctus eros aliquet convallis ultricies. Mauris
-                    augue massa, ultricies non ligula. Suspendisse imperdiet.
-                  </p>
-                </div>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet.
+                </p>
               </details>
             </li>
           </ul>
@@ -471,16 +461,20 @@
         class="container flex flex-col items-center gap-8 py-10 md:flex-row md:gap-12"
       >
         <nav aria-label="Footer">
-          <a aria-label="Bookmark Home" href="#">
-            <img
-              src="/src/assets/images/logo-bookmark.svg"
-              alt=""
-              width="120px"
-            />
-          </a>
           <ul
             class="flex flex-col items-center gap-6 text-[0.7rem] uppercase md:flex-row md:gap-10"
           >
+            <li>
+              <a href="#" class="flex gap-3 items-center">
+                <img
+                  src="/src/assets/images/icon-bookmark.svg"
+                  aria-hidden="true"
+                  width="120px"
+                  class="size-6"
+                />
+                <span class="font-bold text-sm">Bookmark</span>
+              </a>
+            </li>
             <li class="item-nav"><a href="#features">features</a></li>
             <li class="item-nav"><a href="#pricing">pricing</a></li>
             <li class="item-nav"><a href="#contact">contact</a></li>

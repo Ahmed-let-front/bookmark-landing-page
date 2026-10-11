@@ -12,7 +12,7 @@
 }
 @layer base {
   html {
-    @apply scroll-smooth selection:bg-blue-600 selection:text-white [scrollbar-color:var(--color-blue-600)_var(--color-grey-50)] [scrollbar-width:thin];
+    @apply scroll-smooth selection:bg-blue-600 selection:text-white [scrollbar-color:var(--color-blue-600)_var(--color-grey-50)] [scrollbar-width:thin] [interpolate-size:allow-keywords];
   }
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-red-400;
@@ -82,14 +82,20 @@
   .faq-item {
     @apply border-b border-gray-200 py-4;
   }
+  .faq {
+    @apply overflow-hidden;
+  }
+  .faq::details-content {
+    @apply h-0 duration-500 transition-discrete;
+  }
+  .faq[open]::details-content {
+    @apply h-auto;
+  }
   .faq-question {
     @apply flex cursor-pointer items-center justify-between font-medium text-gray-800 list-none [&::-webkit-details-marker]:hidden;
   }
   .faq-icon {
     @apply shrink-0 duration-500 group-open:rotate-180 group-open:hue-rotate-[129deg];
-  }
-  .faq-wapper {
-    @apply grid grid-rows-[0fr] starting:group-open:grid-rows-[0fr] duration-500 transition-discrete overflow-hidden group-open:grid-rows-[1fr];
   }
   .faq-answer {
     @apply text-sm text-gray-500 leading-relaxed min-h-0 pt-3;
