@@ -6,6 +6,7 @@ const elements = {
   tablistFeatures: document.getElementById('tablistFeatures'),
   containerPanels: document.getElementById('containerPanels'),
   allTabBtns: document.querySelectorAll('.tab-btn'),
+  frontendMentorNotice: document.getElementById('frontend-mentor-notice'),
 };
 const state = {
   activeElNum: 1,
@@ -89,10 +90,19 @@ const handleTabedContainer = () => {
     togglePanel();
   });
 };
+const handleOpenDemoNotice = () => {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.demo-link');
+    if (!btn) return;
+    e.preventDefault();
+    elements.frontendMentorNotice.showPopover();
+  });
+};
 const init = () => {
   togglePanel();
   handleFormContactUs();
   handleTabedContainer();
+  handleOpenDemoNotice();
   addObserverINEls();
   addShadowInHeader();
 };

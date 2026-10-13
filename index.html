@@ -52,7 +52,7 @@
           </ul>
           <button
             type="button"
-            class="item-nav before-down-hero animate-down-hero uppercase border-2 font-bold border-red-400 text-white bg-red-400 hover:bg-transparent hover:text-red-400 py-2 px-6 rounded-sm"
+            class="item-nav before-down-hero animate-down-hero uppercase border-2 font-bold border-red-400 text-white bg-red-400 hover:bg-transparent hover:text-red-400 py-2 px-6 rounded-sm demo-link"
           >
             login
           </button>
@@ -131,13 +131,13 @@
             <div class="flex gap-4 max-md:flex-wrap max-md:justify-center">
               <a
                 href="#"
-                class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all duration-300 before-observer-up"
+                class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all duration-300 before-observer-up demo-link"
               >
                 Get it on Chrome
               </a>
               <a
                 href="#"
-                class="bg-grey-50 text-blue-950 px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:border-blue-950 border-2 border-transparent transition-all duration-300 before-observer-up"
+                class="bg-grey-50 text-blue-950 px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:border-blue-950 border-2 border-transparent transition-all duration-300 before-observer-up demo-link"
               >
                 Get it on Firefox
               </a>
@@ -239,7 +239,7 @@
                 drag-and-drop interface gives you complete control over how you
                 manage your favourite sites.
               </p>
-              <a href="#" class="btn-primary">More Info</a>
+              <a href="#" class="btn-primary demo-link">More Info</a>
             </div>
           </div>
         </template>
@@ -265,7 +265,7 @@
                 Our powerful search feature will help you find saved sites in no
                 time at all. No need to trawl through all of your bookmarks.
               </p>
-              <a href="#" class="btn-primary">More Info</a>
+              <a href="#" class="btn-primary demo-link">More Info</a>
             </div>
           </div>
         </template>
@@ -291,7 +291,7 @@
                 Easily share your bookmarks and collections with others. Create
                 a shareable link that you can send at the click of a button.
               </p>
-              <a href="#" class="btn-primary">More Info</a>
+              <a href="#" class="btn-primary demo-link">More Info</a>
             </div>
           </div>
         </template>
@@ -307,7 +307,7 @@
             Download the extension
           </h2>
           <p class="section-text before-observer-up">
-            We’ve got more browsers in the pipeline. Please do let us know if
+            We’ve got  browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
           </p>
           <ul
@@ -322,7 +322,7 @@
               <h3 class="download-name">Add to Chrome</h3>
               <p class="download-version">Minimum version 62</p>
               <hr class="download-divider" />
-              <a href="#" class="btn-primary block w-full px-2 text-xs">
+              <a href="#" class="btn-primary block w-full px-2 text-xs demo-link">
                 Add &amp; Install Extension
               </a>
             </li>
@@ -335,7 +335,7 @@
               <h3 class="download-name">Add to Firefox</h3>
               <p class="download-version">Minimum version 55</p>
               <hr class="download-divider" />
-              <a href="#" class="btn-primary block w-full px-2 text-xs">
+              <a href="#" class="btn-primary block w-full px-2 text-xs demo-link">
                 Add &amp; Install Extension
               </a>
             </li>
@@ -348,7 +348,7 @@
               <h3 class="download-name">Add to Opera</h3>
               <p class="download-version">Minimum version 46</p>
               <hr class="download-divider" />
-              <a href="#" class="btn-primary block w-full px-2 text-xs">
+              <a href="#" class="btn-primary block w-full px-2 text-xs demo-link">
                 Add &amp; Install Extension
               </a>
             </li>
@@ -532,5 +532,29 @@
         </ul>
       </div>
     </footer>
+    <dialog
+      id="frontend-mentor-notice"
+      class="m-auto rounded-xl p-8 max-w-md w-11/12 backdrop:bg-blue-950/70 border-2 border-red-400 bg-white text-blue-950 shadow-2xl opacity-0 scale-0 starting:open:opacity-0 starting:open:scale-0 duration-500 open:opacity-100 open:scale-100 transition-discrete"
+      popover
+    >
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-blue-950 mb-4">
+          Frontend Mentor Project
+        </h2>
+        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+          Please note that this is a front-end implementation built for a
+          Frontend Mentor challenge and is not a real production application or
+          service.
+        </p>
+        <button
+          type="button"
+          popovertarget="frontend-mentor-notice"
+          popovertargetaction="close"
+          class="bg-red-400 text-white font-medium px-6 py-2.5 rounded-md hover:bg-transparent hover:text-red-400 border-2 border-red-400 transition-all duration-300 cursor-pointer uppercase text-xs tracking-wider"
+        >
+          Got it
+        </button>
+      </div>
+    </dialog>
   </body>
 </html>
