@@ -40,11 +40,6 @@ const addShadowInHeader = () => {
   }, options);
   observer.observe(elements.scrollTrigger);
 };
-const handleFormContactUs = () => {
-  elements.formContactUs.addEventListener('submit', e => {
-    e.preventDefault();
-  });
-};
 const removeMovedClasses = () => {
   elements.tablistFeatures.className = elements.tablistFeatures.className
     .replace(/\bmoved\S*/g, '')
@@ -92,7 +87,7 @@ const handleTabedContainer = () => {
 };
 const handleOpenDemoNotice = () => {
   document.addEventListener('click', e => {
-    const btn = e.target.closest('.demo-link');
+    const btn = e.target.closest('.demo-btn');
     if (!btn) return;
     e.preventDefault();
     elements.frontendMentorNotice.showPopover();
@@ -100,7 +95,6 @@ const handleOpenDemoNotice = () => {
 };
 const init = () => {
   togglePanel();
-  handleFormContactUs();
   handleTabedContainer();
   handleOpenDemoNotice();
   addObserverINEls();

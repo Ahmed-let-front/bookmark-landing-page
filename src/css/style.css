@@ -135,7 +135,7 @@
     @apply animate-[fromX_1s_forwards];
   }
   .hidden-els {
-    @apply starting:opacity-0 starting:-translate-x-12 duration-700 opacity-100 translate-x-0 transition-discrete;
+    @apply starting:opacity-0 starting:-translate-x-30 duration-700 opacity-100 translate-x-0 transition-discrete;
   }
 }
 @utility container {
