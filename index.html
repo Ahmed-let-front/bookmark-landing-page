@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A clean and simple bookmark manager to organize your favorite websites quickly and efficiently. Access your bookmarks anywhere."
+    />
+    <title>Bookmark | Simple & Easy Bookmark Manager</title>
+    <script type="module" crossorigin src="/bookmark-landing-page/assets/index-D-jYHBRj.js"></script>
+    <link rel="stylesheet" crossorigin href="/bookmark-landing-page/assets/index-jGEdCA4H.css">
+  </head>
+  <body class="text-blue-950">
+    <div
+      id="scroll-trigger"
+      class="absolute top-0 h-20 w-full pointer-events-none"
+    ></div>
+    <header
+      class="w-full sticky top-0 z-20 bg-white before-down-hero animate-down-hero"
+      id="headOfWeb"
+    >
+      <div
+        class="container flex justify-between items-center py-10 mb-25 max-md:py-6 max-md:mb-12"
+      >
+        <a aria-label="Bookmark Home" href="#">
+          <img
+            src="data:image/svg+xml,%3csvg%20width='148'%20height='25'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cpath%20d='M37%206.299h5.227c.746%200%201.434.155%202.062.466.629.311%201.123.735%201.484%201.27s.542%201.12.542%201.754c0%20.672-.165%201.254-.495%201.746-.33.491-.762.868-1.297%201.129v.15c.697.248%201.25.643%201.661%201.185.41.541.616%201.191.616%201.95%200%20.735-.196%201.385-.588%201.951a3.817%203.817%200%200%201-1.587%201.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04%205.45c.548%200%20.986-.152%201.316-.457.33-.305.495-.688.495-1.148%200-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28%205.619c.61%200%201.086-.159%201.428-.476.342-.317.513-.731.513-1.241%200-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927%202.595c-1.307%200-2.492-.308-3.556-.924a6.711%206.711%200%200%201-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528%200-1.281.305-2.457.915-3.528a6.711%206.711%200%200%201%202.51-2.529C52.756%206.308%2053.94%206%2055.248%206c1.306%200%202.492.308%203.556.924a6.711%206.711%200%200%201%202.51%202.53c.61%201.07.915%202.246.915%203.527%200%201.282-.305%202.458-.915%203.528a6.711%206.711%200%200%201-2.51%202.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52%204.52%200%200%200%202.258-.578%204.177%204.177%200%200%200%201.615-1.624c.392-.697.588-1.494.588-2.39%200-.896-.196-1.692-.588-2.389a4.177%204.177%200%200%200-1.615-1.624%204.52%204.52%200%200%200-2.258-.579%204.47%204.47%200%200%200-2.25.579%204.195%204.195%200%200%200-1.605%201.624c-.392.697-.588%201.493-.588%202.39%200%20.895.196%201.692.588%202.389a4.195%204.195%200%200%200%201.605%201.624%204.47%204.47%200%200%200%202.25.578zm15.353%202.39c-1.307%200-2.492-.308-3.556-.924a6.711%206.711%200%200%201-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528%200-1.281.305-2.457.914-3.528a6.711%206.711%200%200%201%202.511-2.529C68.108%206.308%2069.294%206%2070.6%206c1.307%200%202.492.308%203.556.924a6.711%206.711%200%200%201%202.51%202.53c.61%201.07.915%202.246.915%203.527%200%201.282-.305%202.458-.914%203.528a6.711%206.711%200%200%201-2.511%202.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52%204.52%200%200%200%202.259-.578%204.177%204.177%200%200%200%201.614-1.624c.392-.697.588-1.494.588-2.39%200-.896-.196-1.692-.588-2.389a4.177%204.177%200%200%200-1.614-1.624%204.52%204.52%200%200%200-2.259-.579%204.47%204.47%200%200%200-2.25.579%204.195%204.195%200%200%200-1.605%201.624c-.392.697-.588%201.493-.588%202.39%200%20.895.196%201.692.588%202.389a4.195%204.195%200%200%200%201.606%201.624%204.47%204.47%200%200%200%202.249.578zM79.83%206.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6%2011.973l5.338%207.542v.149h-3.08l-3.994-5.693-1.512%201.773v3.92h-2.52V6.299zM93.779%206h3.248l3.546%209.39h.15L104.268%206h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398%208.81h-1.96l-3.416-8.81h-.149l.15%202.221v6.59h-2.483V6zm20.8%200h2.894l5.021%2013.365h-2.781l-1.12-3.192h-5.115l-1.12%203.192h-2.781L114.579%206zm3.193%207.859l-1.176-3.36-.486-1.606h-.149l-.485%201.606-1.195%203.36h3.49zM124.553%206h4.872c.871%200%201.646.18%202.324.541.678.361%201.204.862%201.577%201.503.374.64.56%201.366.56%202.175%200%20.858-.27%201.62-.812%202.286a4.617%204.617%200%200%201-2.044%201.447l-.018.13%203.584%205.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853%206.03c.573%200%201.04-.175%201.4-.523.361-.349.542-.79.542-1.326%200-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835%205.525%205.34%207.541v.15h-3.08l-3.996-5.694-1.512%201.773v3.92h-2.52V6z'%20fill='%23242A45'%20fill-rule='nonzero'/%3e%3cg%3e%3ccircle%20fill='%235267DF'%20cx='12.5'%20cy='12.5'%20r='12.5'/%3e%3cpath%20d='M9%209v10l3.54-3.44L16.078%2019V9a2%202%200%200%200-2-2H11a2%202%200%200%200-2%202z'%20fill='%23FFF'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+            alt=""
+            width="120px"
+          />
+        </a>
+        <nav
+          aria-label="Main"
+          class="uppercase flex gap-8 items-center text-[0.7rem] max-md:hidden"
+        >
+          <ul class="flex items-center gap-8">
+            <li
+              class="item-nav before-down-hero animate-down-hero animate-delay-[100ms]"
+            >
+              <a href="#features">features</a>
+            </li>
+            <li
+              class="item-nav before-down-hero animate-down-hero animate-delay-[125ms]"
+            >
+              <a href="#pricing">pricing</a>
+            </li>
+            <li
+              class="item-nav before-down-hero animate-down-hero animate-delay-[1050ms]"
+            >
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="item-nav before-down-hero animate-down-hero uppercase border-2 font-bold border-red-400 text-white bg-red-400 hover:bg-transparent hover:text-red-400 py-2 px-6 rounded-sm demo-btn"
+          >
+            login
+          </button>
+        </nav>
+        <button
+          aria-label="Open menu"
+          class="-mr-2 p-2 md:hidden"
+          popovertarget="site-menu"
+          popovertargetaction="show"
+        >
+          <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='15'%3e%3cpath%20fill='%23242A45'%20fill-rule='evenodd'%20d='M0%200h18v3H0V0zm0%206h18v3H0V6zm0%206h18v3H0v-3z'/%3e%3c/svg%3e" alt="" />
+        </button>
+        <dialog
+          id="site-menu"
+          popover
+          aria-label="nav mobile"
+          class="fixed duration-700 transition-discrete size-full z-50 flex-col overflow-y-auto bg-blue-950/95 -translate-y-[20rem] opacity-0 open:opacity-100 open:translate-y-0 starting:open:opacity-0 starting:open:-translate-y-[20rem] px-6 py-8 text-white md:hidden"
+        >
+          <div class="flex items-center justify-between">
+            <a aria-label="Bookmark Home" href="#">
+              <img
+                src="/src/assets/images/logo-bookmark-white.svg"
+                alt=""
+                width="120px"
+              />
+            </a>
+            <button
+              popovertarget="site-menu"
+              popovertargetaction="close"
+              aria-label="Close menu"
+              class="-mr-2 p-2"
+            >
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='15'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M8%205.379L13.303.075l2.122%202.122L10.12%207.5l5.304%205.303-2.122%202.122L8%209.62l-5.303%205.304-2.122-2.122L5.88%207.5.575%202.197%202.697.075%208%205.38z'/%3e%3c/svg%3e" alt="" />
+            </button>
+          </div>
+          <ul class="mt-10 border-b border-white/20">
+            <li><a class="mobile-link" href="#features">features</a></li>
+            <li><a class="mobile-link" href="#pricing">pricing</a></li>
+            <li><a class="mobile-link" href="#contact">contact</a></li>
+          </ul>
+          <button
+            type="button"
+            class="mt-8 w-full cursor-pointer rounded-sm border-2 border-white py-3 text-center font-bold tracking-[0.2rem] uppercase transition-colors duration-300 hover:bg-white hover:text-blue-950"
+          >
+            login
+          </button>
+          <ul class="mt-auto flex justify-center gap-10 pt-10">
+            <li>
+              <a href="#" aria-label="Facebook" class="social-link">
+                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M22.675%200H1.325C.593%200%200%20.593%200%201.325v21.351C0%2023.407.593%2024%201.325%2024H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1%201.893-4.788%204.659-4.788%201.325%200%202.463.099%202.795.143v3.24l-1.918.001c-1.504%200-1.795.715-1.795%201.763v2.313h3.587l-.467%203.622h-3.12V24h6.116c.73%200%201.323-.593%201.323-1.325V1.325C24%20.593%2023.407%200%2022.675%200z'/%3e%3c/svg%3e" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter" class="social-link">
+                <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='20'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M24%202.557a9.83%209.83%200%200%201-2.828.775A4.932%204.932%200%200%200%2023.337.608a9.864%209.864%200%200%201-3.127%201.195A4.916%204.916%200%200%200%2016.616.248c-3.179%200-5.515%202.966-4.797%206.045A13.978%2013.978%200%200%201%201.671%201.149a4.93%204.93%200%200%200%201.523%206.574%204.903%204.903%200%200%201-2.229-.616c-.054%202.281%201.581%204.415%203.949%204.89a4.935%204.935%200%200%201-2.224.084%204.928%204.928%200%200%200%204.6%203.419A9.9%209.9%200%200%201%200%2017.54a13.94%2013.94%200%200%200%207.548%202.212c9.142%200%2014.307-7.721%2013.995-14.646A10.025%2010.025%200%200%200%2024%202.557z'/%3e%3c/svg%3e" alt="" />
+              </a>
+            </li>
+          </ul>
+        </dialog>
+      </div>
+    </header>
+    <main class="overflow-x-clip">
+      <section class="relative">
+        <div
+          class="container flex justify-between items-center max-md:flex-col-reverse max-md:gap-12 max-md:text-center"
+        >
+          <div class="md:w-1/2 before-left-hero animate-left-hero">
+            <h1 class="text-4xl font-medium text-blue-950 max-md:text-3xl">
+              A Simple Bookmark Manager
+            </h1>
+            <p class="text-gray-500 my-4 max-w-md max-md:mx-auto">
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
+            <div class="flex gap-4 max-md:flex-wrap max-md:justify-center">
+              <a
+                href="#"
+                class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all duration-300 before-observer-up demo-btn"
+              >
+                Get it on Chrome
+              </a>
+              <a
+                href="#"
+                class="bg-grey-50 text-blue-950 px-6 py-3 rounded-md font-medium shadow-md hover:bg-transparent hover:border-blue-950 border-2 border-transparent transition-all duration-300 before-observer-up demo-btn"
+              >
+                Get it on Firefox
+              </a>
+            </div>
+          </div>
+          <div
+            class="custom-shape mr-20 md:w-1/2 max-lg:mr-0 max-md:relative max-md:w-full max-md:before:right-[-1.5rem] max-md:before:bottom-[-1.5rem] max-md:before:h-3/5 max-md:before:w-3/4"
+          >
+            <img
+              src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='657'%20height='466'%3e%3cdefs%3e%3cfilter%20id='a'%20width='118%25'%20height='126.9%25'%20x='-9%25'%20y='-5.7%25'%20filterUnits='objectBoundingBox'%3e%3cfeOffset%20dy='2'%20in='SourceAlpha'%20result='shadowOffsetOuter1'/%3e%3cfeGaussianBlur%20in='shadowOffsetOuter1'%20result='shadowBlurOuter1'%20stdDeviation='2'/%3e%3cfeColorMatrix%20in='shadowBlurOuter1'%20result='shadowMatrixOuter1'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.5%200'/%3e%3cfeMerge%3e%3cfeMergeNode%20in='shadowMatrixOuter1'/%3e%3cfeMergeNode%20in='SourceGraphic'/%3e%3c/feMerge%3e%3c/filter%3e%3crect%20id='c'%20width='578'%20height='385'%20rx='26'/%3e%3cfilter%20id='b'%20width='126%25'%20height='139%25'%20x='-13%25'%20y='-11.7%25'%20filterUnits='objectBoundingBox'%3e%3cfeOffset%20dy='30'%20in='SourceAlpha'%20result='shadowOffsetOuter1'/%3e%3cfeGaussianBlur%20in='shadowOffsetOuter1'%20result='shadowBlurOuter1'%20stdDeviation='20'/%3e%3cfeColorMatrix%20in='shadowBlurOuter1'%20values='0%200%200%200%200.18243335%200%200%200%200%200.230632694%200%200%200%200%200.506057518%200%200%200%200.200120192%200'/%3e%3c/filter%3e%3clinearGradient%20id='d'%20x1='99.013%25'%20x2='2.544%25'%20y1='71.675%25'%20y2='29.014%25'%3e%3cstop%20offset='0%25'%20stop-color='%23151515'/%3e%3cstop%20offset='100%25'%20stop-color='%233D3D3D'/%3e%3c/linearGradient%3e%3crect%20id='e'%20width='536'%20height='346'%20y='3'%20rx='8'/%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%20filter='url(%23a)'%20transform='translate(39%209)'%3e%3cg%20transform='translate(.5%20.5)'%3e%3cg%20fill-rule='nonzero'%3e%3cuse%20fill='%23000'%20filter='url(%23b)'%20xlink:href='%23c'/%3e%3cuse%20fill='%23777'%20xlink:href='%23c'/%3e%3c/g%3e%3crect%20width='574.23'%20height='381.865'%20x='2'%20y='2'%20fill='url(%23d)'%20fill-rule='nonzero'%20rx='25'/%3e%3cg%20transform='translate(21.03%2016.303)'%3e%3crect%20width='471.463'%20height='353.756'%20x='33'%20fill='%232A2A2A'%20fill-rule='nonzero'%20opacity='.1'%20rx='5'/%3e%3cmask%20id='f'%20fill='%23fff'%3e%3cuse%20xlink:href='%23e'/%3e%3c/mask%3e%3cuse%20fill='%23E8EAF6'%20fill-rule='nonzero'%20xlink:href='%23e'/%3e%3cg%20mask='url(%23f)'%3e%3cpath%20fill='%235267DF'%20d='M-3.53%203.197h547v59h-547z'/%3e%3cg%20transform='translate(22.47%2017.197)'%20fill='%23FFF'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20opacity='.245'/%3e%3ccircle%20cx='477'%20cy='16'%20r='16'%20opacity='.104'/%3e%3cg%20transform='translate(47%206)'%3e%3crect%20width='120'%20height='6'%20opacity='.75'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20y='14'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20mask='url(%23f)'%3e%3cg%20transform='translate(57%2096)'%3e%3crect%20width='261'%20height='316'%20fill='%23FFF'%20rx='8'/%3e%3crect%20width='128'%20height='316'%20x='295'%20fill='%23FFF'%20rx='8'/%3e%3crect%20width='120'%20height='6'%20x='78.47'%20y='38.197'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20transform='translate(110%20135)'%3e%3ccircle%20cx='16'%20cy='26'%20r='16'%20fill='%23F98E5D'/%3e%3crect%20width='88'%20height='6'%20x='284'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='40'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='60'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='94'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='114'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='134'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='30'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3cg%20transform='translate(110%20201)'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%236AC6D6'/%3e%3crect%20width='120'%20height='6'%20x='47'%20y='6'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3cg%20transform='translate(110%20257)'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23A47ED4'/%3e%3crect%20width='120'%20height='6'%20x='47'%20y='6'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3cg%20transform='translate(110%20313)'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23EC7878'/%3e%3crect%20width='120'%20height='6'%20x='47'%20y='6'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+              alt="Bookmark app dashboard preview"
+              class="max-md:mx-auto before-right-hero animate-right-hero"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="features"
+        class="page-section"
+        aria-labelledby="features-title"
+      >
+        <div class="container text-center before-observer-up">
+          <h2 id="features-title" class="section-title">Features</h2>
+          <p class="section-text">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+          <ul
+            role="tablist"
+            aria-label="Features"
+            class="mx-auto mt-10 relative flex max-w-lg flex-col border-t border-gray-200 md:flex-row md:border-t-0 md:border-b justify-between md:after:absolute md:after:bottom-0 md:after:left-after md:after:h-1 md:after:w-after md:after:bg-red-400 md:after:duration-300"
+            id="tablistFeatures"
+          >
+            <li role="presentation">
+              <button
+                id="tab-1"
+                class="tab-btn"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-1"
+              >
+                Simple Bookmarking
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                id="tab-2"
+                type="button"
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-2"
+              >
+                Speedy Searching
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                id="tab-3"
+                class="tab-btn"
+                aria-selected="false"
+                type="button"
+                role="tab"
+                aria-controls="panel-3"
+              >
+                Easy Sharing
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="container mt-14 md:mt-20"
+          aria-live="polite"
+          id="containerPanels"
+        ></div>
+        <!-- Template Panel 1 -->
+        <template id="template-panel-1">
+          <div
+            id="panel-1"
+            role="tabpanel"
+            aria-labelledby="tab-1"
+            class="tab-panel hidden-els"
+          >
+            <div class="tab-media">
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='536'%20height='346'%3e%3cdefs%3e%3crect%20id='a'%20width='536'%20height='346'%20rx='8'/%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cmask%20id='b'%20fill='%23fff'%3e%3cuse%20xlink:href='%23a'/%3e%3c/mask%3e%3cuse%20fill='%23E8EAF6'%20fill-rule='nonzero'%20xlink:href='%23a'/%3e%3cg%20mask='url(%23b)'%3e%3cpath%20fill='%23242A45'%20d='M-3.53.197h547v59h-547z'/%3e%3cg%20transform='translate(22.47%2014.197)'%20fill='%23FFF'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20opacity='.245'/%3e%3ccircle%20cx='477'%20cy='16'%20r='16'%20opacity='.104'/%3e%3cg%20transform='translate(47%206)'%3e%3crect%20width='120'%20height='6'%20opacity='.75'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20y='14'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cg%20mask='url(%23b)'%3e%3cg%20transform='translate(57%2093)'%3e%3crect%20width='261'%20height='316'%20fill='%23FFF'%20rx='8'/%3e%3crect%20width='128'%20height='316'%20x='295'%20fill='%23FFF'%20rx='8'/%3e%3crect%20width='120'%20height='6'%20x='78.47'%20y='38.197'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3c/g%3e%3c/g%3e%3cg%20transform='translate(88.47%20115.197)'%3e%3ccircle%20cx='16'%20cy='26'%20r='16'%20fill='%23F98E5D'/%3e%3crect%20width='88'%20height='6'%20x='284'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='40'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='60'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='94'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='114'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='88'%20height='6'%20x='284'%20y='134'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='30'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3cg%20transform='translate(88.47%20181.197)'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%236AC6D6'/%3e%3crect%20width='120'%20height='6'%20x='47'%20y='6'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3cg%20transform='translate(88.47%20237.197)'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23A47ED4'/%3e%3crect%20width='120'%20height='6'%20x='47'%20y='6'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3cg%20transform='translate(88.47%20293.197)'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23EC7878'/%3e%3crect%20width='120'%20height='6'%20x='47'%20y='6'%20fill='%23242A45'%20opacity='.5'%20rx='3'/%3e%3crect%20width='64'%20height='6'%20x='47'%20y='20'%20fill='%23242A45'%20opacity='.25'%20rx='3'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+                alt="Drag and drop bookmark manager interface"
+                class="w-full"
+              />
+            </div>
+
+            <div class="lg:w-1/2">
+              <h3 class="tab-title">Bookmark in one click</h3>
+              <p class="tab-text">
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
+              <a href="#" class="btn-primary demo-btn">More Info</a>
+            </div>
+          </div>
+        </template>
+
+        <!-- Template Panel 2 -->
+        <template id="template-panel-2">
+          <div
+            id="panel-2"
+            role="tabpanel"
+            aria-labelledby="tab-2"
+            class="tab-panel hidden-els"
+          >
+            <div class="tab-media h-[80%]">
+              <img
+                src="/bookmark-landing-page/assets/illustration-features-tab-2-D6TWLMkl.svg"
+                alt="Bookmark search interface"
+                class="w-full"
+              />
+            </div>
+            <div class="lg:w-1/2">
+              <h3 class="tab-title">Intelligent search</h3>
+              <p class="tab-text">
+                Our powerful search feature will help you find saved sites in no
+                time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <a href="#" class="btn-primary demo-btn">More Info</a>
+            </div>
+          </div>
+        </template>
+
+        <!-- Template Panel 3 -->
+        <template id="template-panel-3">
+          <div
+            id="panel-3"
+            role="tabpanel"
+            aria-labelledby="tab-3"
+            class="tab-panel hidden-els"
+          >
+            <div class="tab-media">
+              <img
+                src="/bookmark-landing-page/assets/illustration-features-tab-3-Dw4MMxR1.svg"
+                alt="Bookmark sharing interface"
+                class="w-full"
+              />
+            </div>
+            <div class="lg:w-1/2">
+              <h3 class="tab-title">Share your bookmarks</h3>
+              <p class="tab-text">
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <a href="#" class="btn-primary demo-btn">More Info</a>
+            </div>
+          </div>
+        </template>
+      </section>
+
+      <section
+        id="pricing"
+        class="page-section"
+        aria-labelledby="download-title"
+      >
+        <div class="container text-center">
+          <h2 id="download-title" class="section-title before-observer-up">
+            Download the extension
+          </h2>
+          <p class="section-text before-observer-up">
+            We’ve got  browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+          <ul
+            class="mx-auto mt-14 grid max-w-xs gap-8 md:max-w-3xl md:grid-cols-3 md:items-start md:gap-6"
+          >
+            <li class="download-card before-observer-up">
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='102'%20height='100'%3e%3cg%20fill='none'%3e%3cpath%20fill='%23E16B5A'%20d='M50.768.01s30.01-1.325%2045.916%2028.249H48.217s-9.154-.296-16.957%2010.594c-2.25%204.561-4.65%209.27-1.95%2018.538-3.9-6.472-20.708-35.164-20.708-35.164S20.457%201.186%2050.768.009z'/%3e%3cpath%20fill='%23FFD464'%20d='M95.122%2075.095S81.284%20101.238%2047.21%2099.952C51.414%2092.82%2071.45%2058.8%2071.45%2058.8s4.837-7.626-.875-19.696c-2.903-4.192-11.7-8.586-21.237-10.928%207.67-.075%2047.25.005%2047.25.005s12.653%2020.59-1.466%2046.915z'/%3e%3cpath%20fill='%2374B340'%20d='M6.628%2075.294s-16.17-24.825%202.004-53.116l24.225%2041.163s4.314%207.92%2017.832%209.104c5.153-.368%2010.514-.682%2017.351-7.607C64.27%2071.387%2047.327%20100%2047.327%20100s-24.51.448-40.7-24.706z'/%3e%3cellipse%20cx='50.646'%20cy='50.406'%20fill='%23FFF'%20rx='23.064'%20ry='22.656'/%3e%3cellipse%20cx='50.638'%20cy='50.406'%20fill='%232995CC'%20rx='18.292'%20ry='17.969'/%3e%3cpath%20fill='%23268CBF'%20d='M50.643%2032.441c-.364%200-.724.014-1.082.034%209.598.55%2017.209%208.369%2017.209%2017.934%200%209.568-7.611%2017.386-17.21%2017.937.36.02.72.034%201.083.034%2010.101%200%2018.292-8.046%2018.292-17.97%200-9.923-8.19-17.969-18.292-17.969z'/%3e%3c/g%3e%3c/svg%3e"
+                alt=""
+                class="download-logo"
+              />
+              <h3 class="download-name">Add to Chrome</h3>
+              <p class="download-version">Minimum version 62</p>
+              <hr class="download-divider" />
+              <a href="#" class="btn-primary block w-full px-2 text-xs demo-btn">
+                Add &amp; Install Extension
+              </a>
+            </li>
+            <li class="download-card md:mt-7 before-observer-up">
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='105'%20height='100'%3e%3cpath%20fill='%23FF9800'%20d='M105%2050c0%2028.862-23.513%2050-52.5%2050S0%2076.588%200%2047.726c0-9.043%202.33-17.59%206.392-25a.995.995%200%200%201%20.23-.366C4.338%2018.956%203.334%2010.318%209.128%204.541c0%202.411%201.464%206.548%203.104%209.638%201.326%202.457%202.737%204.228%203.741%204%202.284-.543%2010.27-.543%2011.412%200%201.877-2.405%206.445-9.09%2013.703-9.09-4.062%204.045-15.704%2018.185%204.567%2018.185h4.568L36.52%2036.363s1.556%203%200%204.548c-1.732-1.732-9.128%201.862-9.128%206.815s5.296%2011.363%2015.98%2011.363c10.683%200%207.986-4.548%2013.696-4.548%205.709%200%206.844%204.548%206.844%204.548-7.855%200-13.558%209.09-22.824%209.09%204.567%203.364%207.58%204.547%2013.696%204.547%2015.113%200%2027.392-12.225%2027.392-27.274%200-6.09-2.008-11.683-5.388-16.224a27.414%2027.414%200%200%201%2010.96%2019.498%2040.554%2040.554%200%200%200%201.279-10.089c0-13.683-5.84-31.776-15.98-38.637C87.655%204.358%20105%2018.466%20105%2045.452V50z'/%3e%3c/svg%3e"
+                alt=""
+                class="download-logo"
+              />
+              <h3 class="download-name">Add to Firefox</h3>
+              <p class="download-version">Minimum version 55</p>
+              <hr class="download-divider" />
+              <a href="#" class="btn-primary block w-full px-2 text-xs demo-btn">
+                Add &amp; Install Extension
+              </a>
+            </li>
+            <li class="download-card md:mt-14 before-observer-up">
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='96'%20height='100'%3e%3cpath%20fill='%23EB6060'%20fill-rule='evenodd'%20d='M48%20100C21.49%20100%200%2077.614%200%2050S21.49%200%2048%200s48%2022.386%2048%2050-21.49%2050-48%2050zm0-10c13.807%200%2025-17.909%2025-40S61.807%2010%2048%2010%2023%2027.909%2023%2050s11.193%2040%2025%2040z'/%3e%3c/svg%3e"
+                alt=""
+                class="download-logo"
+              />
+              <h3 class="download-name">Add to Opera</h3>
+              <p class="download-version">Minimum version 46</p>
+              <hr class="download-divider" />
+              <a href="#" class="btn-primary block w-full px-2 text-xs demo-btn">
+                Add &amp; Install Extension
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-section" aria-labelledby="faq-title">
+        <div class="container text-center before-observer-up">
+          <h2 id="faq-title" class="section-title">
+            Frequently Asked Questions
+          </h2>
+          <p class="section-text">
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+          <ul class="mx-auto mt-12 max-w-sm text-left">
+            <li class="faq-item before-observer-up">
+              <details class="group faq" name="faq">
+                <summary class="faq-question">
+                  What is Bookmark?
+                  <img
+                    src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='12'%3e%3cpath%20fill='none'%20stroke='%235267DF'%20stroke-width='3'%20d='M1%201l8%208%208-8'/%3e%3c/svg%3e"
+                    alt=""
+                    class="faq-icon"
+                  />
+                </summary>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet.
+                </p>
+              </details>
+            </li>
+            <li class="faq-item before-observer-up">
+              <details class="group faq" name="faq">
+                <summary class="faq-question">
+                  How can I request a new browser?
+                  <img
+                    src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='12'%3e%3cpath%20fill='none'%20stroke='%235267DF'%20stroke-width='3'%20d='M1%201l8%208%208-8'/%3e%3c/svg%3e"
+                    alt=""
+                    class="faq-icon"
+                  />
+                </summary>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                  luctus eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdiet.
+                </p>
+              </details>
+            </li>
+            <li class="faq-item before-observer-up">
+              <details class="group faq" name="faq">
+                <summary class="faq-question">
+                  Is there a mobile app?
+                  <img
+                    src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='12'%3e%3cpath%20fill='none'%20stroke='%235267DF'%20stroke-width='3'%20d='M1%201l8%208%208-8'/%3e%3c/svg%3e"
+                    alt=""
+                    class="faq-icon"
+                  />
+                </summary>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet.
+                </p>
+              </details>
+            </li>
+            <li class="faq-item before-observer-up">
+              <details class="group faq" name="faq">
+                <summary class="faq-question">
+                  What about other Chromium browsers?
+                  <img
+                    src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='12'%3e%3cpath%20fill='none'%20stroke='%235267DF'%20stroke-width='3'%20d='M1%201l8%208%208-8'/%3e%3c/svg%3e"
+                    alt=""
+                    class="faq-icon"
+                  />
+                </summary>
+                <p class="faq-answer">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet.
+                </p>
+              </details>
+            </li>
+          </ul>
+          <a href="#" class="btn-primary mt-12 before-observer-up">More Info</a>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="page-section bg-blue-600 px-6 py-16 text-center text-white md:py-20"
+        aria-labelledby="contact-title"
+      >
+        <p class="text-xs tracking-[0.3rem] uppercase before-observer-up">
+          35,000+ already joined
+        </p>
+        <h2
+          id="contact-title"
+          class="mx-auto mt-4 max-w-xs text-2xl font-medium md:text-3xl before-observer-up"
+        >
+          Stay up-to-date with what we’re doing
+        </h2>
+        <form
+          novalidate
+          class="mx-auto mt-8 flex max-w-sm flex-col items-start gap-3 sm:flex-row before-observer-up"
+          id="formContactUs"
+        >
+          <div class="relative w-full flex-1 text-left">
+            <label for="email" class="sr-only">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="Enter your email address"
+              aria-describedby="email-error"
+              class="peer w-full rounded-md border-2 border-white bg-white px-4 py-3 text-sm text-blue-950 placeholder:text-gray-400 user-invalid:rounded-b-none user-invalid:border-red-400"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='20'%20height='20'%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='10'%20cy='10'%20r='10'%20fill='%23FA5959'/%3e%3cg%20fill='%23FFF'%20transform='translate(9%205)'%3e%3crect%20width='2'%20height='7'%20rx='1'/%3e%3crect%20width='2'%20height='2'%20y='8'%20rx='1'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+              alt=""
+              class="pointer-events-none absolute top-3.5 right-3 hidden peer-user-invalid:block"
+            />
+            <p
+              id="email-error"
+              class="hidden rounded-b-md bg-red-400 px-4 py-1 text-xs italic peer-user-invalid:block"
+            >
+              Whoops, make sure it’s an email
+            </p>
+          </div>
+          <button
+            type="submit"
+            class="w-full cursor-pointer rounded-md border-2 border-red-400 bg-red-400 px-6 py-3 text-sm font-medium transition-colors duration-300 hover:bg-white hover:text-red-400 sm:w-auto demo-btn"
+          >
+            Contact Us
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-blue-950 text-white">
+      <div
+        class="container flex flex-col items-center gap-8 py-10 md:flex-row md:gap-12"
+      >
+        <nav aria-label="Footer">
+          <ul
+            class="flex flex-col items-center gap-6 text-[0.7rem] uppercase md:flex-row md:gap-10"
+          >
+            <li>
+              <a href="#" class="flex gap-3 items-center">
+                <img
+                  src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%3e%3ccircle%20cx='20'%20cy='20'%20r='20'%20fill='%235267DF'/%3e%3cpath%20d='M13%2011C13%209.89543%2013.8954%209%2015%209H25C26.1046%209%2027%209.89543%2027%2011V29L20%2024L13%2029V11Z'%20fill='white'/%3e%3c/svg%3e"
+                  aria-hidden="true"
+                  width="120px"
+                  class="size-6"
+                />
+                <span class="font-bold text-sm">Bookmark</span>
+              </a>
+            </li>
+            <li class="item-nav"><a href="#features">features</a></li>
+            <li class="item-nav">
+              <a href="#pricing">pricing</a>
+            </li>
+            <li class="item-nav">
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="flex gap-8 items-center md:ml-auto">
+          <li>
+            <a href="#" aria-label="Facebook" class="social-link">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M22.675%200H1.325C.593%200%200%20.593%200%201.325v21.351C0%2023.407.593%2024%201.325%2024H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1%201.893-4.788%204.659-4.788%201.325%200%202.463.099%202.795.143v3.24l-1.918.001c-1.504%200-1.795.715-1.795%201.763v2.313h3.587l-.467%203.622h-3.12V24h6.116c.73%200%201.323-.593%201.323-1.325V1.325C24%20.593%2023.407%200%2022.675%200z'/%3e%3c/svg%3e" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter" class="social-link">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='20'%3e%3cpath%20fill='%23FFF'%20fill-rule='evenodd'%20d='M24%202.557a9.83%209.83%200%200%201-2.828.775A4.932%204.932%200%200%200%2023.337.608a9.864%209.864%200%200%201-3.127%201.195A4.916%204.916%200%200%200%2016.616.248c-3.179%200-5.515%202.966-4.797%206.045A13.978%2013.978%200%200%201%201.671%201.149a4.93%204.93%200%200%200%201.523%206.574%204.903%204.903%200%200%201-2.229-.616c-.054%202.281%201.581%204.415%203.949%204.89a4.935%204.935%200%200%201-2.224.084%204.928%204.928%200%200%200%204.6%203.419A9.9%209.9%200%200%201%200%2017.54a13.94%2013.94%200%200%200%207.548%202.212c9.142%200%2014.307-7.721%2013.995-14.646A10.025%2010.025%200%200%200%2024%202.557z'/%3e%3c/svg%3e" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <dialog
+      id="frontend-mentor-notice"
+      class="m-auto rounded-xl p-8 max-w-md w-11/12 backdrop:bg-blue-950/70 border-2 border-red-400 bg-white text-blue-950 shadow-2xl opacity-0 scale-0 starting:open:opacity-0 starting:open:scale-0 duration-500 open:opacity-100 open:scale-100 transition-discrete"
+      popover
+    >
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-blue-950 mb-4">
+          Frontend Mentor Project
+        </h2>
+        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+          Please note that this is a front-end implementation built for a
+          Frontend Mentor challenge and is not a real production application or
+          service.
+        </p>
+        <button
+          type="button"
+          popovertarget="frontend-mentor-notice"
+          popovertargetaction="close"
+          class="bg-red-400 text-white font-medium px-6 py-2.5 rounded-md hover:bg-transparent hover:text-red-400 border-2 border-red-400 transition-all duration-300 cursor-pointer uppercase text-xs tracking-wider"
+        >
+          Got it
+        </button>
+      </div>
+    </dialog>
+  </body>
+</html>
