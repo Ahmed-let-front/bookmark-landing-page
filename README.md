@@ -19,6 +19,10 @@ Welcome to the **Bookmark Landing Page** web application, a modern, highly inter
 
 ---
 
+## Lighthouse Performance Audit
+
+![Lighthouse Score](public/lighthouse.png)
+---
 ## Logic Architecture Notice
 
 > 💡 **Note:** Since this is a modern front-end **Landing Page**, a complex architectural flowchart is not required. The project relies on clean component rendering, event delegation, and state-driven DOM updates.
