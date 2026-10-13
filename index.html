@@ -170,7 +170,8 @@
           <ul
             role="tablist"
             aria-label="Features"
-            class="mx-auto mt-10 flex max-w-lg flex-col border-t border-gray-200 md:flex-row md:border-t-0 md:border-b justify-between"
+            class="mx-auto mt-10 relative flex max-w-lg flex-col border-t border-gray-200 md:flex-row md:border-t-0 md:border-b justify-between md:after:absolute md:after:bottom-0 md:after:left-after md:after:h-1 md:after:w-after md:after:bg-red-400 md:after:duration-300"
+            id="tablistFeatures"
           >
             <li role="presentation">
               <button
@@ -200,9 +201,9 @@
               <button
                 id="tab-3"
                 class="tab-btn"
+                aria-selected="false"
                 type="button"
                 role="tab"
-                aria-selected="false"
                 aria-controls="panel-3"
               >
                 Easy Sharing
@@ -210,12 +211,18 @@
             </li>
           </ul>
         </div>
-        <div class="container mt-14 md:mt-20">
+        <div
+          class="container mt-14 md:mt-20"
+          aria-live="polite"
+          id="containerPanels"
+        ></div>
+        <!-- Template Panel 1 -->
+        <template id="template-panel-1">
           <div
             id="panel-1"
             role="tabpanel"
             aria-labelledby="tab-1"
-            class="tab-panel before-observer-up"
+            class="tab-panel hidden-els"
           >
             <div class="tab-media">
               <img
@@ -224,6 +231,7 @@
                 class="w-full"
               />
             </div>
+
             <div class="lg:w-1/2">
               <h3 class="tab-title">Bookmark in one click</h3>
               <p class="tab-text">
@@ -234,14 +242,17 @@
               <a href="#" class="btn-primary">More Info</a>
             </div>
           </div>
+        </template>
+
+        <!-- Template Panel 2 -->
+        <template id="template-panel-2">
           <div
             id="panel-2"
             role="tabpanel"
             aria-labelledby="tab-2"
-            class="tab-panel"
-            hidden
+            class="tab-panel hidden-els"
           >
-            <div class="tab-media">
+            <div class="tab-media h-[80%]">
               <img
                 src="/src/assets/images/illustration-features-tab-2.svg"
                 alt="Bookmark search interface"
@@ -257,12 +268,15 @@
               <a href="#" class="btn-primary">More Info</a>
             </div>
           </div>
+        </template>
+
+        <!-- Template Panel 3 -->
+        <template id="template-panel-3">
           <div
             id="panel-3"
             role="tabpanel"
             aria-labelledby="tab-3"
-            class="tab-panel"
-            hidden
+            class="tab-panel hidden-els"
           >
             <div class="tab-media">
               <img
@@ -280,7 +294,7 @@
               <a href="#" class="btn-primary">More Info</a>
             </div>
           </div>
-        </div>
+        </template>
       </section>
 
       <section
@@ -440,6 +454,7 @@
         <form
           novalidate
           class="mx-auto mt-8 flex max-w-sm flex-col items-start gap-3 sm:flex-row before-observer-up"
+          id="formContactUs"
         >
           <div class="relative w-full flex-1 text-left">
             <label for="email" class="sr-only">Email address</label>

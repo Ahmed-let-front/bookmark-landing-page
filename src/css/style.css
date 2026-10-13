@@ -7,6 +7,9 @@
   --color-blue-600: hsl(231 69% 60%);
   --color-red-400: hsl(0 94% 66%);
 
+  --left-after-el: 0;
+  --width-after-el: 120px;
+
   --color-grey-50: hsl(0 0% 97%);
   --color-blue-950: hsl(229 31% 21%);
 }
@@ -28,8 +31,9 @@
   }
 
   .page-section {
-    @apply mt-24 scroll-mt-8 md:mt-36;
+    @apply mt-24 scroll-mt-8 md:mt-36 relative isolate w-full  lg:max-w-none;
   }
+
   .section-title {
     @apply text-2xl font-medium md:text-3xl;
   }
@@ -48,10 +52,15 @@
   }
 
   .tab-btn {
-    @apply relative w-full cursor-pointer border-b border-gray-200 py-4 text-sm transition-colors duration-300 hover:text-red-400 md:border-b-0 md:py-5 after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-1/2 after:-translate-x-1/2 after:scale-x-0 after:bg-red-400 after:transition-transform after:duration-300 after:content-[''] aria-selected:after:scale-x-100 md:after:w-full;
+    @apply relative w-full cursor-pointer border-b border-gray-200 py-4 text-sm transition-colors duration-300 hover:text-red-400 md:border-b-0 md:py-5 max-md:after:absolute max-md:after:bottom-0 max-md:after:left-1/2 max-md:after:-translate-x-1/2 max-md:after:h-1 max-md:after:scale-0 max-md:after:w-30 max-md:after:bg-red-400 max-md:after:duration-300 aria-selected:after:scale-100;
   }
   .tab-panel {
     @apply flex flex-col items-center gap-12 text-center lg:flex-row lg:gap-20 lg:text-left;
+  }
+  .tab-panel.hidden {
+    @apply opacity-0 -translate-x-12;
+  }
+  #tablistFeatures {
   }
   .tab-media {
     @apply relative isolate w-full max-w-md lg:w-1/2 lg:max-w-none before:absolute before:top-1/4 before:-bottom-1/4 before:right-[16%] before:-z-10 before:w-screen before:rounded-br-[6rem] before:bg-blue-600 before:content-[''];
@@ -127,6 +136,9 @@
   .animate-right-hero {
     @apply animate-[fromX_1s_forwards];
   }
+  .hidden-els {
+    @apply starting:opacity-0 starting:-translate-x-12 duration-700 opacity-100 translate-x-0 transition-discrete;
+  }
 }
 @utility container {
   width: 100%;
@@ -150,6 +162,12 @@
   @media (width >= 96rem) {
     max-width: 82rem;
   }
+}
+@utility left-after {
+  left: var(--left-after-el);
+}
+@utility w-after {
+  width: var(--width-after-el);
 }
 @keyframes fromX {
   to {
