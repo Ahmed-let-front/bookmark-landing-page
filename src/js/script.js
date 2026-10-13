@@ -2,11 +2,12 @@ const elements = {
   headOfWeb: document.getElementById('headOfWeb'),
   scrollTrigger: document.getElementById('scroll-trigger'),
   allBeforeObserver: document.querySelectorAll('.before-observer-up'),
-  formContactUs: document.getElementById('formContactUs'),
   tablistFeatures: document.getElementById('tablistFeatures'),
   containerPanels: document.getElementById('containerPanels'),
   allTabBtns: document.querySelectorAll('.tab-btn'),
   frontendMentorNotice: document.getElementById('frontend-mentor-notice'),
+  siteMenu: document.getElementById('site-menu'),
+  btnOpenSiteMenu: document.getElementById('open-site-menu'),
 };
 const state = {
   activeElNum: 1,
@@ -93,10 +94,18 @@ const handleOpenDemoNotice = () => {
     elements.frontendMentorNotice.showPopover();
   });
 };
+const handleClickInSiteMenu = () => {
+  elements.siteMenu.addEventListener('click', e => {
+    const btn = e.target.closest('.nav-li');
+    if (!btn) return;
+    e.currentTarget.hidePopover();
+  });
+};
 const init = () => {
   togglePanel();
   handleTabedContainer();
   handleOpenDemoNotice();
+  handleClickInSiteMenu();
   addObserverINEls();
   addShadowInHeader();
 };
