@@ -31,7 +31,7 @@
   }
 
   .page-section {
-    @apply mt-24 scroll-mt-8 md:mt-36 relative isolate w-full  lg:max-w-none;
+    @apply mt-24 scroll-mt-36 md:mt-36 relative isolate w-full  lg:max-w-none;
   }
 
   .section-title {
@@ -61,7 +61,7 @@
     @apply opacity-0 -translate-x-12;
   }
   .tab-media {
-    @apply relative isolate w-full max-w-md lg:w-1/2 lg:max-w-none before:absolute before:top-1/4 before:-bottom-1/4 before:right-[16%] before:-z-10 before:w-screen before:rounded-br-[6rem] before:bg-blue-600 before:content-[''];
+    @apply relative isolate w-full max-w-md lg:w-1/2 lg:max-w-none before:absolute before:top-1/4 before:-bottom-1/4 before:right-[16%] before:-z-10 before:w-screen before:rounded-br-[6rem] before:bg-blue-600 before:content-[''] before:h-[80%] before:xl:h-[90%];
   }
   .tab-title {
     @apply text-2xl font-medium md:text-3xl;

@@ -8,6 +8,7 @@ const elements = {
   frontendMentorNotice: document.getElementById('frontend-mentor-notice'),
   siteMenu: document.getElementById('site-menu'),
   btnOpenSiteMenu: document.getElementById('open-site-menu'),
+  formContactUs: document.getElementById('formContactUs'),
 };
 const state = {
   activeElNum: 1,
@@ -46,7 +47,7 @@ const togglePanel = (panelNum = state.activeElNum) => {
   if (!template) return;
   const clone = template.content.cloneNode(true);
   const panelDiv = clone.querySelector('div');
-  panelDiv.id = 'panel-1';
+  panelDiv.id = `panel-${panelNum}`;
   elements.containerPanels.innerHTML = '';
   elements.containerPanels.append(clone);
 };
@@ -55,23 +56,30 @@ const moveTheEl = activeTab => {
   const parentRect = elements.tablistFeatures.getBoundingClientRect();
   const leftPos = tabRect.left - parentRect.left;
   const width = tabRect.width;
-  if (window.innerWidth > 768) {
-    document.documentElement.style.setProperty(
-      '--left-after-el',
-      `${leftPos}px`,
-    );
-    document.documentElement.style.setProperty(
-      `--width-after-el`,
-      `${width}px`,
-    );
-  } else {
-    elements.allTabBtns.forEach(el => {
-      el.classList.remove('max-md:after:scale-100');
-      el.classList.add('max-md:after:scale-0');
-    });
-    activeTab.classList.remove('max-md:after:scale-0');
-    activeTab.classList.add('max-md:after:scale-100');
-  }
+  const rootStyle = document.documentElement.style;
+  rootStyle.setProperty('--left-after-el', `${leftPos}px`);
+  rootStyle.setProperty(`--width-after-el`, `${width}px`);
+};
+const selectTab = tab => {
+  elements.allTabBtns.forEach(el =>
+    el.setAttribute('aria-selected', String(el === tab)),
+  );
+};
+const handleContactUs = () => {
+  elements.formContactUs.addEventListener('submit', e => {
+    e.preventDefault();
+    const { email } = e.currentTarget.elements;
+    console.log(email.checkValidity());
+    if (!email.checkValidity()) {
+      email.setAttribute('aria-invalid', 'true');
+      email.setAttribute('aria-describedby', 'email-error');
+      email.focus();
+      return;
+    }
+    email.removeAttribute('aria-invalid');
+    email.removeAttribute('aria-describedby');
+    elements.frontendMentorNotice.showPopover();
+  });
 };
 const handleTabedContainer = () => {
   elements.tablistFeatures.addEventListener('click', e => {
@@ -80,6 +88,7 @@ const handleTabedContainer = () => {
     const placeBtn = btn.id.split('-')[1];
     state.activeElNum = placeBtn;
     moveTheEl(btn);
+    selectTab(btn);
     togglePanel();
   });
 };
@@ -103,6 +112,7 @@ const init = () => {
   handleTabedContainer();
   handleOpenDemoNotice();
   handleClickInSiteMenu();
+  handleContactUs();
   addObserverINEls();
   addShadowInHeader();
 };
