@@ -45,6 +45,8 @@ const togglePanel = (panelNum = state.activeElNum) => {
   const template = document.getElementById(`template-panel-${panelNum}`);
   if (!template) return;
   const clone = template.content.cloneNode(true);
+  const panelDiv = clone.querySelector('div');
+  panelDiv.id = 'panel-1';
   elements.containerPanels.innerHTML = '';
   elements.containerPanels.append(clone);
 };
