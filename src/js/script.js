@@ -18,7 +18,7 @@ const addObserverINEls = () => {
     rootMargin: '0px',
     threshold: 0.3,
   };
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observerUp = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate-observer-up');
@@ -26,7 +26,7 @@ const addObserverINEls = () => {
       }
     });
   }, options);
-  elements.allBeforeObserver.forEach(el => observer.observe(el));
+  elements.allBeforeObserver.forEach(el => observerUp.observe(el));
 };
 const addShadowInHeader = () => {
   const options = {
@@ -40,11 +40,6 @@ const addShadowInHeader = () => {
     });
   }, options);
   observer.observe(elements.scrollTrigger);
-};
-const removeMovedClasses = () => {
-  elements.tablistFeatures.className = elements.tablistFeatures.className
-    .replace(/\bmoved\S*/g, '')
-    .trim();
 };
 const togglePanel = (panelNum = state.activeElNum) => {
   const template = document.getElementById(`template-panel-${panelNum}`);
